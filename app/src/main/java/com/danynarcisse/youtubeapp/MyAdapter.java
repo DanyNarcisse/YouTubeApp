@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import javax.xml.transform.Result;
 
 /**
  * Created by Dany on 3/16/2018.
@@ -25,6 +24,7 @@ public class MyAdapter extends RecyclerView.Adapter<YoutubeVideoViewHolder> {
     public MyAdapter(List<Result> myDataset) {
         mDataset = myDataset;
     }
+
 
     // Create new views (invoked by the layout manager)
     @Override
@@ -44,8 +44,8 @@ public class MyAdapter extends RecyclerView.Adapter<YoutubeVideoViewHolder> {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         Result result = this.mDataset.get(position);
-        holder.title.setText(result.toString()); //(result.snippet.description.toString());
-        holder.description.setText(result.toString());
+        holder.title.setText(result.snippet.description.toString()); //(result.snippet.description.toString());
+        holder.description.setText(result.snippet.description.toString());
         //holder.Bind(result);
 
     }
