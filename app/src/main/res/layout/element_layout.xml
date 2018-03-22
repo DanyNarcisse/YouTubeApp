@@ -11,6 +11,7 @@
         style="@android:style/TextAppearance.DeviceDefault.Large"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
         tools:text="Title" />
 
     <TextView
@@ -18,6 +19,7 @@
         style="@android:style/TextAppearance.DeviceDefault.Medium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
         tools:text="Description" />
 
 </LinearLayout>
