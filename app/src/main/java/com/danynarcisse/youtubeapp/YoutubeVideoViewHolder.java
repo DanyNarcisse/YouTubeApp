@@ -34,7 +34,7 @@ public class YoutubeVideoViewHolder  extends RecyclerView.ViewHolder{
                 Log.e("debug","je clique");
                 Intent intent = new Intent(v.getContext(), VideoActivity.class);
                 //intent.putExtra("IS_SHOW",isShow);
-                //itemView.getContentDescription().startActivity(intent);
+                v.getContext().startActivity(intent);
             }
         });
     }
