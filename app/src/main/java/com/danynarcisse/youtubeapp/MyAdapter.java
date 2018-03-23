@@ -1,5 +1,6 @@
 package com.danynarcisse.youtubeapp;
 
+import com.squareup.picasso.Picasso;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,6 +47,7 @@ public class MyAdapter extends RecyclerView.Adapter<YoutubeVideoViewHolder> {
         Result result = this.mDataset.get(position);
         holder.title.setText(result.snippet.description.toString()); //(result.snippet.description.toString());
         holder.description.setText(result.snippet.description.toString());
+        Picasso.get().load(result.snippet.thumbnails.get("medium").url).into(holder.miniature);
         //holder.Bind(result);
 
     }

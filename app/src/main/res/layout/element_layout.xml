@@ -1,25 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="10dp">
 
-    <TextView
-        android:id="@+id/titleTextView"
-        style="@android:style/TextAppearance.DeviceDefault.Large"
+    <RelativeLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_red_dark"
-        tools:text="Title" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/descriptionTextView"
-        style="@android:style/TextAppearance.DeviceDefault.Medium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        tools:text="Description" />
+        <TextView
+            android:id="@+id/descriptionTextView"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleTextView"
+            android:layout_toEndOf="@+id/miniatureImageView"
+            android:textColor="@android:color/black"
+            tools:text="Description" />
+
+        <ImageView
+            android:id="@+id/miniatureImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@android:style/TextAppearance.DeviceDefault.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/miniatureImageView"
+            android:textColor="@android:color/holo_red_dark"
+            tools:text="Title" />
+    </RelativeLayout>
 
 </LinearLayout>

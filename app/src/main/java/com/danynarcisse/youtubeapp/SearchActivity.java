@@ -1,5 +1,6 @@
 package com.danynarcisse.youtubeapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -25,6 +26,8 @@ public class SearchActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
+
+    private static final int NEXT_REQUEST_CODE = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +77,10 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
+    public void switchActivity()
+    {
+
+    }
 
 
 }
