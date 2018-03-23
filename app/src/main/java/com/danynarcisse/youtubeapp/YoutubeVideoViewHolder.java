@@ -23,6 +23,8 @@ public class YoutubeVideoViewHolder  extends RecyclerView.ViewHolder{
     public YoutubeVideoViewHolder(final View itemView) {
         super(itemView);
 
+
+        //Get all data of xml, and binds the view and code.
         title = itemView.findViewById(R.id.titleTextView);
         description = itemView.findViewById(R.id.descriptionTextView);
         miniature = itemView.findViewById(R.id.miniatureImageView);
@@ -31,7 +33,7 @@ public class YoutubeVideoViewHolder  extends RecyclerView.ViewHolder{
         space.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("debug","je clique");
+                Log.e("debug","Clicking");
                 Intent intent = new Intent(v.getContext(), VideoActivity.class);
                 //intent.putExtra("IS_SHOW",isShow);
                 v.getContext().startActivity(intent);

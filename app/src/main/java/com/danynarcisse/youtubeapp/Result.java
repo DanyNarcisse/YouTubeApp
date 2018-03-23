@@ -6,7 +6,7 @@ import java.util.Map;
  * Created by Dany on 3/16/2018.
  */
 
-
+// Gather results to make a list of results.
 public class Result {
 
     public String kind;

@@ -6,7 +6,7 @@ import java.util.Map;
  * Created by Dany on 3/16/2018.
  */
 
-
+//Gather the snippet of the result
 class SnippetClass {
 
     public String publishedAt;

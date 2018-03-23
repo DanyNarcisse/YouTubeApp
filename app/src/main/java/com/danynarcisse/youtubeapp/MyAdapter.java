@@ -13,7 +13,7 @@ import java.util.List;
  * Created by Dany on 3/16/2018.
  */
 
-
+//Gather the list of results and binds them to the recycler view
 public class MyAdapter extends RecyclerView.Adapter<YoutubeVideoViewHolder> {
     private final List<Result> mDataset;
 
@@ -31,10 +31,10 @@ public class MyAdapter extends RecyclerView.Adapter<YoutubeVideoViewHolder> {
     @Override
     public YoutubeVideoViewHolder onCreateViewHolder(ViewGroup parent,
                                                      int viewType) {
-        // create a new view
+        // Create a new view
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.element_layout, parent, false);
-        // set the view's size, margins, paddings and layout parameters
+        // Set the view's size, margins, paddings and layout parameters
         YoutubeVideoViewHolder vh = new YoutubeVideoViewHolder(v);
         return vh;
     }

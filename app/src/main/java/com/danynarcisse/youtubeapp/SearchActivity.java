@@ -36,24 +36,29 @@ public class SearchActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
 
 
+        //Retrofit to make the youtube request: used to make http requests
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://www.googleapis.com/youtube/v3/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
+        //Get the recycler view to display everything
         recyclerView = (RecyclerView) findViewById(R.id.Recycler_View);
 
+        //Allows me to request
         final YoutubeService service = retrofit.create(YoutubeService.class);
 
         final Button button = findViewById(R.id.rechercheButton);
 
+
+        //Main activity when pressing buttons
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 recyclerView.setLayoutManager(layoutManager);
                 EditText search = (EditText) findViewById(R.id.queryEditText);
                 String q = search.getText().toString();
-                Call<YoutubeVideoResult> videos = service.GetVideo(API_KEY,PART,q,MAX_RESULT);
+                Call<YoutubeVideoResult> videos = service.GetVideo(API_KEY,PART,q,MAX_RESULT); //Make the request and transform everything in a result list.
                 videos.enqueue(new Callback<YoutubeVideoResult>() {
                     @Override
                     public void onResponse(Response<YoutubeVideoResult> response) {

@@ -8,7 +8,7 @@ import retrofit.http.Query;
  * Created by Dany on 3/16/2018.
  */
 
-
+//Methods that make the http request to get the data
 public interface YoutubeService {
     @GET("search")
     Call<YoutubeVideoResult> GetVideo (
